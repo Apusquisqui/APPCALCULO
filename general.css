@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+/* Reseteamos los márgenes y rellenos por defecto del navegador para tener el control total */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Declaramos las variables globales. Simplificamos la paleta a un "Modo Oscuro Plano" */
+:root {
+  --bg0: #121212;
+  /* Declaramos el fondo principal (negro suave) */
+  --bg1: #1e1e1e;
+  /* Declaramos el fondo de los contenedores y tarjetas */
+  --accent: #4caf50;
+  /* Declaramos un verde estándar y plano para aciertos */
+  --blue: #2196f3;
+  /* Declaramos un azul estándar para información */
+  --text: #ffffff;
+  /* Declaramos el color del texto principal */
+  --muted: #aaaaaa;
+  /* Declaramos el color gris para textos secundarios */
+  --red: #f44336;
+  /* Declaramos un rojo plano para errores */
+  --border: #333333;
+  /* Declaramos el color de nuestras líneas divisorias */
+  --font: 'Nunito', sans-serif;
+  /* Configuramos la tipografía */
+}
+
+/* Configuramos el cuerpo de la página (Body) */
+body {
+  font-family: var(--font);
+  background: var(--bg0);
+  color: var(--text);
+  display: flex;
+  /* Usamos flexbox para acomodar la barra lateral y el contenido principal */
+  min-height: 100vh;
+}
+
+/* ── BARRA LATERAL (SIDEBAR) ── */
+
+/* Configuramos el contenedor principal de la barra lateral */
+.sidebar {
+  width: 68px;
+  /* Ancho inicial cerrado */
+  background: var(--bg1);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0;
+  position: fixed;
+  /* Mantenemos la barra fija a la izquierda de la pantalla */
+  height: 100vh;
+  transition: width 0.2s ease;
+  /* Suavizamos la animación al abrirse */
+  overflow: hidden;
+  z-index: 100;
+}
+
+/* Evaluamos si la barra tiene la clase 'open' para expandir su tamaño */
+.sidebar.open {
+  width: 200px;
+}
+
+/* Configuramos los elementos individuales del menú */
+.sb-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  width: 100%;
+  color: var(--muted);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Evaluamos el comportamiento al pasar el ratón sobre los elementos del menú */
+.sb-item:hover {
+  color: var(--text);
+  background: var(--border);
+}
+
+.sb-item i {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+/* Ocultamos el texto de los botones por defecto y los mostramos solo al abrir la barra */
+.sb-item-label,
+.sb-logo-text,
+.sb-toggle-label {
+  display: none;
+}
+
+.sidebar.open .sb-item-label,
+.sidebar.open .sb-logo-text,
+.sidebar.open .sb-toggle-label {
+  display: block;
+}
+
+/* Configuramos el botón inferior que abre y cierra el menú */
+.sb-toggle {
+  margin-top: auto;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+}
+
+/* ── CONTENIDO PRINCIPAL ── */
+
+/* Configuramos el espacio derecho donde vivirá nuestra página web */
+.page-main {
+  margin-left: 68px;
+  /* Dejamos el espacio exacto que ocupa la barra lateral cerrada */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Configuramos la barra superior (TopBar) */
+.topbar {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg1);
+}
+
+.topbar-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* ── BOTONES PLANOS (FLAT DESIGN) ── */
+
+/* Eliminamos el efecto 3D anterior y creamos un botón plano, moderno y simple */
+.btn-green,
+.btn-check {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  /* Reducimos las curvas para un estilo más minimalista */
+  padding: 12px 20px;
+  font-family: var(--font);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+/* Configuramos un cambio simple de opacidad en lugar de mover el botón hacia abajo */
+.btn-green:hover,
+.btn-check:hover {
+  opacity: 0.85;
+}
+
+.btn-check {
+  width: 100%;
+  text-transform: uppercase;
+}
+
+/* Evaluamos el caso en el que el botón marque un error */
+.btn-check.red {
+  background: var(--red);
+}
+
+/* ── CAJAS Y TARJETAS ── */
+
+/* Configuramos la caja principal de bienvenida (Hero) */
+.hero {
+  background: var(--bg1);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+/* Configuramos el panel derecho del ejercicio interactivo */
+.ex-panel {
+  background: var(--bg1);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.ex-head {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ex-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Configuramos la caja donde mostramos la función matemática */
+.func-box {
+  background: var(--bg0);
+  border: 1px solid var(--border);
+  padding: 16px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.func-main {
+  font-family: monospace;
+  font-size: 20px;
+  color: var(--blue);
+}
+
+/* ── OPCIONES DE RESPUESTA ── */
+
+/* Configuramos el contenedor tipo rejilla para las respuestas */
+.choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Configuramos las tarjetas de opciones elegibles */
+.choice-btn {
+  background: var(--bg0);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Evaluamos visualmente qué pasa cuando seleccionamos, acertamos o fallamos */
+.choice-btn.selected {
+  border-color: var(--blue);
+}
+
+.choice-btn.correct {
+  background: rgba(76, 175, 80, 0.1);
+  border-color: var(--accent);
+}
+
+.choice-btn.wrong {
+  background: rgba(244, 67, 54, 0.1);
+  border-color: var(--red);
+}
+
+/* ── RETROALIMENTACIÓN (FEEDBACK) ── */
+
+/* Configuramos la caja que aparecerá para darnos mensajes de error o éxito */
+.feedback-box {
+  border-radius: 6px;
+  padding: 12px;
+  display: none;
+  /* La ocultamos por defecto hasta que interactuemos con JavaScript */
+  margin-top: 10px;
+}
+
+.feedback-box.ok {
+  background: rgba(76, 175, 80, 0.1);
+  border: 1px solid var(--accent);
+  display: block;
+}
+
+.feedback-box.err {
+  background: rgba(244, 67, 54, 0.1);
+  border: 1px solid var(--red);
+  display: block;
+}

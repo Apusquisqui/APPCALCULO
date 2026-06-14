@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica — LoopMath</title>
+  <link rel="stylesheet" href="estilos/general.css">
+  <link rel="stylesheet" href="estilos/toPractica.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <!-- pack estilos-->
+  <script src="https://www.desmos.com/api/v1.9/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+  <!-- api desmos-->
+</head>
+
+</head>
+
+<body>
+
+  <nav class="sidebar" id="sidebar">
+    <a class="sb-logo" href="index.html">
+      <div class="sb-logo-icon"><i class="ti ti-math-function"></i></div>
+      <span class="sb-logo-text">FALTANOMBRE</span>
+    </a>
+    <a class="sb-item" data-page="index.html" href="index.html"><i class="ti ti-home"></i><span
+        class="sb-item-label">Inicio</span></a>
+    <a class="sb-item" data-page="lecciones.html" href="leccion.html"><i class="ti ti-book"></i><span
+        class="sb-item-label">Lecciones</span></a>
+    <a class="sb-item active" data-page="practica.html" href="practica.html"><i class="ti ti-pencil"></i><span
+        class="sb-item-label">Práctica</span></a>
+    <a class="sb-item" data-page="clasificacion.html" href="clasificacion.html"><i class="ti ti-trophy"></i><span
+        class="sb-item-label">Clasificación</span></a>
+    <div class="sb-divider"></div>
+    <a class="sb-item" data-page="formulario.html" href="formulario.html"><i class="ti ti-notebook"></i><span
+        class="sb-item-label">Formulario</span></a>
+    <a class="sb-item" data-page="ajustes.html" href="ajustes.html"><i class="ti ti-settings"></i><span
+        class="sb-item-label">Ajustes</span></a>
+    <button class="sb-toggle" id="sb-toggle"><i class="ti ti-chevrons-right"></i><span
+        class="sb-toggle-label">Colapsar</span></button>
+  </nav>
+
+  <div class="page-main">
+    <header class="topbar">
+      <div>
+        <div class="topbar-title">Práctica libre</div>
+        <div class="topbar-sub">Filtra por regla y dificultad, resuelve a tu ritmo</div>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <div class="filter-panel">
+        <div class="fp-title">Filtros</div>
+        <div class="fp-label">Regla</div>
+        <button class="filter-btn active" onclick="filterRule(this,'all')">Todas las reglas</button>
+        <button class="filter-btn" onclick="filterRule(this,'potencias')">Potencias</button>
+        <button class="filter-btn" onclick="filterRule(this,'cadena')">Cadena</button>
+        <button class="filter-btn" onclick="filterRule(this,'producto')">Producto</button>
+        <button class="filter-btn" onclick="filterRule(this,'cociente')">Cociente</button>
+        <button class="filter-btn" onclick="filterRule(this,'trig')">Trigonométricas</button>
+        <div class="fp-label">Dificultad</div>
+        <button class="diff-btn active" onclick="filterDiff(this,'all')">Todas</button>
+        <button class="diff-btn" onclick="filterDiff(this,'easy')">Fácil</button>
+        <button class="diff-btn" onclick="filterDiff(this,'medium')">Media</button>
+        <button class="diff-btn" onclick="filterDiff(this,'hard')">Difícil</button>
+      </div>
+
+      <div class="ex-grid" id="ex-grid">
+
+        <div class="ex-card" data-rule="potencias" data-diff="easy">
+          <div class="ex-card-head">
+            <div class="ec-head-l">
+              <div class="ec-icon g"><i class="ti ti-superscript"></i></div>
+              <div>
+                <div class="ec-title">Ejercicio 1</div>
+                <div class="ec-rule">Regla de potencias</div>
+              </div>
+            </div>
+            <span class="diff-tag easy">Fácil</span>
+          </div>
+          <div class="ex-card-body">
+            <div class="ec-func"><span>f(x) = x⁵</span></div>
+            <div class="ec-choices">
+              <div class="ec-choice" onclick="ecPick(this,'1','wrong')">
+                <div class="ec-choice-expr">x⁴</div>
+              </div>
+              <div class="ec-choice" onclick="ecPick(this,'1','correct')">
+                <div class="ec-choice-expr">5x⁴</div>
+              </div>
+              <div class="ec-choice" onclick="ecPick(this,'1','wrong')">
+                <div class="ec-choice-expr">5x⁵</div>
+              </div>
+              <div class="ec-choice" onclick="ecPick(this,'1','wrong')">
+                <div class="ec-choice-expr">4x³</div>
+              </div>
+            </div>
+            <div class="ec-feedback" id="fb1"></div>
+            <button class="ec-btn" id="btn1" onclick="ecCheck('1')">Comprobar</button>
+          </div>
+        </div>
+
+        <div class="ex-card" data-rule="potencias" data-diff="easy">
+          <div class="ex-card-head">
+            <div class="ec-head-l">
+              <div class="ec-icon g"><i class="ti ti-superscript"></i></div>
+              <div>
+                <div class="ec-title">Ejercicio 2</div>
+                <div class="ec-rule">Regla de potencias + constante</div>
+              </div>
+            </div>
+            <span class="diff-tag easy">Fácil</span>
+          </div>
+          <div class="ex-card-body">
+            <div class="ec-func"><span>f(x) = 3x⁴ − 2x + 7</span></div>
+            <div class="ec-choices">
+              <div class="ec-choice" onclick="ecPick(this,'2','wrong')">
+                <div class="ec-choice-expr">3x³ − 2</div>
+              </div>
+              <div class="ec-choice" onclick="ecPick(this,'2','correct')">
+                <div class="ec-choice-expr">12x³ − 2</div>
+              </div>
+              <div class="ec-choice" onclick="ecPick(this,'2','wrong')">
+                <div class="ec-choice-expr">12x³ + 7</div>
+              </div>
+              <div class="ec-choice" onclick="ecPick(this,'2','wrong')">
+                <div class="ec-choice-expr">12x⁴ − 2</div>
+              </div>
+            </div>
+            <div class="ec-feedback" id="fb2"></div>
+            <button class="ec-btn" id="btn2" onclick="ecCheck('2')">Comprobar</button>
+          </div>
+        </div>
+
+        <div class="ex-card" data-rule="cadena" data-diff="medium">
+          <div class="ex-card-head">
+            <div class="ec-head-l">
+              <div class="ec-icon b"><i class="ti ti-link"></i></div>
+              <div>
+                <div class="ec-title">Ejercicio 3</div>
+                <div class="ec-rule">Regla de la cadena</div>
+              </div>
+            </div>
+            <span class="diff-tag medium">Media</span>
+          </div>
+          <div class="ex-card-body">
+            <div class="ec-func"><span>f(x) = (2x + 1)⁴</span></div>
+            <div class="ec-choices">
+              <div class="ec-choice" onclick="ecPick(this,'3','wrong')">
+                <div class="ec-choice-expr">4(2x+1)³</div>
+              </div>
+              <div class="ec-choice" onclick="ecPick(this,'3','correct')">
+                <div class="ec-choice-expr">8(2x+1)³</div>
+              </div>
+              <div class="ec-choice" onclick="ecPick(this,'3','wrong')">
+                <div class="ec-choice-expr">4(2x+1)⁴</div>
+              </div>
+              <div class="ec-choice" onclick="ecPick(this,'3','wrong')">
+                <div class="ec-choice-expr">2(2x+1)³</div>
+              </div>
+            </div>
+            <div class="ec-feedback" id="fb3"></div>
+            <button class="ec-btn" id="btn3" onclick="ecCheck('3')">Comprobar</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="scrpts/sidebar.js"></script>
+  <script src="scrpts/practicaa.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoopMath — Aprende a Derivar</title>
+    <link rel="stylesheet" href="estilos/general.css">
+    <link rel="stylesheet" href="estilos/cssINDEX.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <!-- pack estilos-->
+    <script src="https://www.desmos.com/api/v1.9/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <!-- api desmos-->
+</head>
+</head>
+
+<body>
+
+    <nav class="sidebar" id="sidebar">
+        <a class="sb-logo" href="index.html">
+            <div class="sb-logo-icon"><i class="ti ti-math-function"></i></div>
+            <span class="sb-logo-text">FALTANOMBRE</span>
+        </a>
+
+        <a class="sb-item" data-page="index.html" href="index.html">
+            <i class="ti ti-home" aria-hidden="true"></i>
+            <span class="sb-item-label">Inicio</span>
+        </a>
+        <a class="sb-item" data-page="lecciones.html" href="lecciones.html">
+            <i class="ti ti-book" aria-hidden="true"></i>
+            <span class="sb-item-label">Lecciones</span>
+        </a>
+        <a class="sb-item" data-page="practica.html" href="practica.html">
+            <i class="ti ti-pencil" aria-hidden="true"></i>
+            <span class="sb-item-label">Práctica</span>
+        </a>
+        <a class="sb-item" data-page="clasificacion.html" href="clasificacion.html">
+            <i class="ti ti-trophy" aria-hidden="true"></i>
+            <span class="sb-item-label">Clasificación</span>
+        </a>
+
+        <div class="sb-divider"></div>
+
+        <a class="sb-item" data-page="formulario.html" href="formulario.html">
+            <i class="ti ti-notebook" aria-hidden="true"></i>
+            <span class="sb-item-label">Formulario</span>
+        </a>
+        <a class="sb-item" data-page="ajustes.html" href="ajustes.html">
+            <i class="ti ti-settings" aria-hidden="true"></i>
+            <span class="sb-item-label">Ajustes</span>
+        </a>
+
+        <button class="sb-toggle" id="sb-toggle" aria-label="Expandir menú">
+            <i class="ti ti-chevrons-right" aria-hidden="true"></i>
+            <span class="sb-toggle-label">Colapsar</span>
+        </button>
+    </nav>
+
+    <div class="page-main">
+        <header class="topbar">
+            <div>
+                <div class="topbar-title">Inicio</div>
+                <div class="topbar-sub">FALTANOMBRE · Cálculo Diferencial paso a paso</div>
+            </div>
+        </header>
+
+        <div class="content">
+
+            <div>
+                <div class="hero">
+                    <div class="hero-eyebrow">Bienvenido a FALTANOMBRE</div>
+                    <div class="hero-title">Aprende a derivar<br>desde cero</div>
+                    <div class="hero-sub">Domina las reglas de derivación con ejercicios. Cada solución te la
+                        explicaremos en pasos claros para que entiendas el proceso completo a seguir.</div>
+                    <div class="hero-actions">
+                        <a class="btn-green" href="leccion.html">Comenzar lecciones</a>
+                        <a class="btn-outline" href="practica.html">Ir a práctica libre</a>
+                    </div>
+                </div>
+
+                <div class="section-label">Reglas disponibles</div>
+                <div class="rules-grid">
+                    <a class="rule-card" href="lecciones.html#potencias">
+                        <div class="rc-icon green"><i class="ti ti-superscript"></i></div>
+                        <div class="rc-name">Regla de potencias</div>
+                        <div class="rc-desc">Deriva xⁿ en un solo paso</div>
+                        <span class="rc-tag">d/dx[xⁿ] = n·xⁿ⁻¹</span>
+                    </a>
+                    <a class="rule-card" href="lecciones.html#cadena">
+                        <div class="rc-icon blue"><i class="ti ti-link"></i></div>
+                        <div class="rc-name">Regla de la cadena</div>
+                        <div class="rc-desc">Funciones compuestas f(g(x))</div>
+                        <span class="rc-tag">f'(g(x))·g'(x)</span>
+                    </a>
+                    <a class="rule-card" href="lecciones.html#producto">
+                        <div class="rc-icon orange"><i class="ti ti-x"></i></div>
+                        <div class="rc-name">Regla del producto</div>
+                        <div class="rc-desc">Deriva u·v correctamente</div>
+                        <span class="rc-tag">u'v + uv'</span>
+                    </a>
+                    <a class="rule-card" href="lecciones.html#cociente">
+                        <div class="rc-icon red"><i class="ti ti-divide"></i></div>
+                        <div class="rc-name">Regla del cociente</div>
+                        <div class="rc-desc">Deriva u/v sin errores de signo</div>
+                        <span class="rc-tag">(u'v - uv') / v²</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="ex-panel">
+                <div class="ex-head">
+                    <div class="ex-head-l">
+                        <div class="ex-head-icon"><i class="ti ti-link"></i></div>
+                        <div>
+                            <div class="ex-head-title">Ejercicio de ejemplo</div>
+                            <div class="ex-head-sub">Regla de la cadena · Nivel 1</div>
+                        </div>
+                    </div>
+                    <div class="ex-pill">Demo</div>
+                </div>
+
+                <div class="ex-body">
+                    <div class="ex-q-label">Deriva la siguiente función</div>
+
+                    <div class="func-box">
+                        <div class="func-main">f(x) = sin(x²)</div>
+                        <div class="func-tag">Función compuesta · g(h(x)) donde g = sin, h = x²</div>
+                    </div>
+
+                    <div class="steps-board">
+                        <div class="step-row">
+                            <div class="step-dot done">1</div>
+                            <div>
+                                <div class="step-tag done">Identificar estructura</div>
+                                <div class="step-expr done">exterior: sin(u) · interior: u = x²</div>
+                            </div>
+                        </div>
+                        <div class="step-row">
+                            <div class="step-dot now">2</div>
+                            <div>
+                                <div class="step-tag now">Aplicar regla de la cadena</div>
+                                <div class="step-expr now">f'(x) = cos(u) · u'</div>
+                                <div class="step-note">d/dx[sin(u)] = cos(u) · du/dx</div>
+                            </div>
+                        </div>
+                        <div class="step-row">
+                            <div class="step-dot wait" id="dot3">3</div>
+                            <div>
+                                <div class="step-tag wait" id="tag3">Derivar la interior</div>
+                                <div class="step-expr wait" id="expr3">u' = ?</div>
+                            </div>
+                        </div>
+                        <div class="step-row">
+                            <div class="step-dot wait" id="dot4">4</div>
+                            <div>
+                                <div class="step-tag wait" id="tag4">Resultado final</div>
+                                <div class="step-expr wait" id="expr4">f'(x) = ?</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="ex-divider">
+                    <div class="ex-ask">¿Cuál es la derivada de u = x²?</div>
+
+                    <div class="choices" id="choices">
+                        <div class="choice-btn" onclick="seleccionarOpcion(this,'wrong')">
+                            <div class="choice-expr">x²</div>
+                            <div class="choice-hint">Sin cambio</div>
+                        </div>
+                        <div class="choice-btn" onclick="seleccionarOpcion(this,'correct')">
+                            <div class="choice-expr">2x</div>
+                            <div class="choice-hint">Regla de potencias</div>
+                        </div>
+                        <div class="choice-btn" onclick="seleccionarOpcion(this,'wrong')">
+                            <div class="choice-expr">2</div>
+                            <div class="choice-hint">Constante</div>
+                        </div>
+                        <div class="choice-btn" onclick="seleccionarOpcion(this,'wrong')">
+                            <div class="choice-expr">x</div>
+                            <div class="choice-hint">Lineal</div>
+                        </div>
+                    </div>
+
+                    <div class="feedback-box" id="fb">
+                        <i class="ti fb-icon" id="fb-icon"></i>
+                        <div>
+                            <div class="fb-title" id="fb-title"></div>
+                            <div class="fb-body" id="fb-body"></div>
+                        </div>
+                    </div>
+
+                    <button class="btn-check" id="btn-check" onclick="comprobarRespuesta()">Comprobar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="scrpts/sidebar.js"></script>
+    <script src="scrpts/toindexx.js"></script>
+
+
+</body>
+
+</html>
