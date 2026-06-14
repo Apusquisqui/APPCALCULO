@@ -15,10 +15,18 @@
   /* Declaramos el fondo principal (negro suave) */
   --bg1: #1e1e1e;
   /* Declaramos el fondo de los contenedores y tarjetas */
+  --bg2: #2a2a2a;
+  /* Fondo secundario para hovers y elementos destacados */
   --accent: #4caf50;
   /* Declaramos un verde estándar y plano para aciertos */
+  --accent-dark: #388e3c;
+  /* Verde oscuro para sombras de botones */
   --blue: #2196f3;
   /* Declaramos un azul estándar para información */
+  --blue-bg: #1a2a3a;
+  /* Fondo azul para iconos */
+  --orange: #ff9800;
+  /* Naranja para elementos destacados */
   --text: #ffffff;
   /* Declaramos el color del texto principal */
   --muted: #aaaaaa;
