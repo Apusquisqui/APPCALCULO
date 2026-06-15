@@ -16,3 +16,11 @@
     if (el.dataset.page === page) el.classList.add('active');
   });
 })();
+
+// Función para colapsar/desplegar unidades en PAG. lecciones
+    function toggleUnit(unitId) {
+      const unit = document.getElementById(unitId);
+      if (unit) {
+        unit.classList.toggle('collapsed');
+      }
+    }
