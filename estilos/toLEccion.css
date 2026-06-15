@@ -31,6 +31,26 @@
    margin-bottom: 24px;
  }
 
+ /* Clase para unidad colapsada */
+ .unit.collapsed .lessons-list {
+   display: none;
+ }
+
+ /* Icono de flecha para desplegar */
+ .uh-toggle {
+   cursor: pointer;
+   transition: transform 0.3s ease;
+   font-size: 18px;
+   color: var(--muted);
+ }
+
+ .unit.collapsed .uh-toggle {
+   transform: rotate(-90deg);
+ }
+
+
+
+
  /* Configuramos la parte superior (cabecera) de la unidad */
  .unit-head {
    display: flex;
