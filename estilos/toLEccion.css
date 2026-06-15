@@ -59,6 +59,7 @@
    padding: 16px 20px;
    border-bottom: 1px solid var(--border);
    background: var(--bg0);
+   cursor: pointer;
  }
 
  .uh-left {
