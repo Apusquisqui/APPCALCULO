@@ -1,163 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lecciones — LoopMath</title>
-  <link rel="stylesheet" href="estilos/toLEccion.css">
-  <link rel="stylesheet" href="estilos/general.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-  <!-- pack estilos-->
-  <script src="https://www.desmos.com/api/v1.9/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-  <!-- api desmos-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecciones - LoopMath</title>
+    <!-- Vinculamos el CSS específico de lecciones -->
+    <link rel="stylesheet" href="estilos/general.css">
+    <link rel="stylesheet" href="estilos/leccion.css">
 </head>
-
 <body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>LoopMath</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="leccion.html" class="active">Lecciones</a></li>
+                    <li><a href="practica.html">Práctica</a></li>
+                    <li><a href="#">Clasificación</a></li>
+                    <li><a href="#">Formulario</a></li>
+                    <li><a href="#">Ajustes</a></li>
+                </ul>
+                <!-- Opcional: Índice rápido interno -->
+                <div class="internal-nav">
+                    <h4>Ir a:</h4>
+                    <a href="#unidad1">Unidad 1</a>
+                    <a href="#unidad2">Unidad 2</a>
+                    <a href="#unidad3">Unidad 3</a>
+                    <a href="#unidad4">Unidad 4</a>
+                </div>
+            </nav>
+        </aside>
 
-  <nav class="sidebar" id="sidebar">
-    <a class="sb-logo" href="index.html">
-      <div class="sb-logo-icon"><i class="ti ti-math-function"></i></div>
-      <span class="sb-logo-text">LoopMath</span>
-    </a>
-    <a class="sb-item" data-page="index.html" href="index.html">
-      <i class="ti ti-home"></i><span class="sb-item-label">Inicio</span>
-    </a>
-    <a class="sb-item active" data-page="lecciones.html" href="lecciones.html">
-      <i class="ti ti-book"></i><span class="sb-item-label">Lecciones</span>
-    </a>
-    <a class="sb-item" data-page="practica.html" href="practica.html">
-      <i class="ti ti-pencil"></i><span class="sb-item-label">Práctica</span>
-    </a>
-    <a class="sb-item" data-page="clasificacion.html" href="clasificacion.html">
-      <i class="ti ti-trophy"></i><span class="sb-item-label">Clasificación</span>
-    </a>
-    <div class="sb-divider"></div>
-    <a class="sb-item" data-page="formulario.html" href="formulario.html">
-      <i class="ti ti-notebook"></i><span class="sb-item-label">Formulario</span>
-    </a>
-    <a class="sb-item" data-page="ajustes.html" href="ajustes.html">
-      <i class="ti ti-settings"></i><span class="sb-item-label">Ajustes</span>
-    </a>
-    <button class="sb-toggle" id="sb-toggle" aria-label="Expandir o colapsar menú">
-      <i class="ti ti-chevrons-right"></i>
-      <span class="sb-toggle-label">Colapsar</span>
-    </button>
-  </nav>
+        <main class="content">
+            <header>
+                <h1>Lecciones de Derivadas</h1>
+                <p>Selecciona una unidad para desplegar el contenido</p>
+            </header>
 
-  <div class="page-main">
-    <header class="topbar">
-      <div>
-        <div class="topbar-title">Lecciones</div>
-        <div class="topbar-sub">Elige una unidad y comienza a aprender</div>
-      </div>
-    </header>
+            <!-- Unidad 1 -->
+            <details id="unidad1" class="lesson-card">
+                <summary class="lesson-header">
+                    <span class="icon">📚</span>
+                    <h3>Unidad 1: Introducción y Límites</h3>
+                    <span class="arrow">▼</span>
+                </summary>
+                <div class="lesson-content">
+                    <h4>Conceptos Básicos</h4>
+                    <p>Aquí iría tu contenido sobre límites, continuidad y la definición formal de derivada.</p>
+                    <ul>
+                        <li>Definición de límite</li>
+                        <li>Límites laterales</li>
+                        <li>Tasa de cambio promedio vs instantánea</li>
+                    </ul>
+                    <div class="example-box">
+                        <strong>Ejemplo:</strong> Calcula el límite cuando x tiende a 2...
+                    </div>
+                </div>
+            </details>
 
-    <div class="content">
+            <!-- Unidad 2 -->
+            <details id="unidad2" class="lesson-card">
+                <summary class="lesson-header">
+                    <span class="icon">⚡</span>
+                    <h3>Unidad 2: Reglas Básicas de Derivación</h3>
+                    <span class="arrow">▼</span>
+                </summary>
+                <div class="lesson-content">
+                    <h4>Reglas Fundamentales</h4>
+                    <p>Contenido sobre la regla de la potencia, suma, resta y constantes.</p>
+                    <ul>
+                        <li>Derivada de una constante</li>
+                        <li>Regla de la potencia (x^n)</li>
+                        <li>Regla de la suma y resta</li>
+                    </ul>
+                    <div class="example-box">
+                        <strong>Ejemplo:</strong> f(x) = x² → f'(x) = 2x
+                    </div>
+                </div>
+            </details>
 
-      <!-- UNIDAD 1 -->
-      <!-- FIX: id único "unidad-potencias" en lugar de "potencias" (evita colisión con lesson-item de abajo) -->
-      <div class="unit" id="unidad-potencias">
-        <div class="unit-head">
-          <div class="uh-left">
-            <div class="uh-icon g"><i class="ti ti-superscript"></i></div>
-            <div>
-              <div class="uh-name">Unidad 1 · Fundamentos</div>
-              <div class="uh-sub">Definición, constantes y regla de potencias</div>
-            </div>
-          </div>
-          <div class="status-pill done">Disponible</div>
-        </div>
-        <div class="lessons-list">
-          <a class="lesson-item" href="leccion.html?id=1">
-            <div class="li-num done">1</div>
-            <div class="li-info">
-              <div class="li-name">¿Qué es una derivada?</div>
-              <div class="li-desc">Definición intuitiva: razón de cambio instantánea</div>
-              <div class="li-formula">f'(x) = lim(h→0) [f(x+h)−f(x)] / h</div>
-            </div>
-            <i class="ti ti-chevron-right li-action"></i>
-          </a>
-          <a class="lesson-item" href="leccion.html?id=2">
-            <div class="li-num done">2</div>
-            <div class="li-info">
-              <div class="li-name">Derivada de una constante</div>
-              <div class="li-desc">La derivada de cualquier número fijo siempre es cero</div>
-              <div class="li-formula">d/dx[c] = 0</div>
-            </div>
-            <i class="ti ti-chevron-right li-action"></i>
-          </a>
-          <a class="lesson-item" href="leccion.html?id=3">
-            <div class="li-num done">3</div>
-            <div class="li-info">
-              <div class="li-name">Regla de potencias</div>
-              <div class="li-desc">El método más usado: baja el exponente y resta uno</div>
-              <div class="li-formula">d/dx[xⁿ] = n·xⁿ⁻¹</div>
-            </div>
-            <i class="ti ti-chevron-right li-action"></i>
-          </a>
-        </div>
-      </div>
+            <!-- Unidad 3 (Nueva) -->
+            <details id="unidad3" class="lesson-card">
+                <summary class="lesson-header">
+                    <span class="icon">🔗</span>
+                    <h3>Unidad 3: Regla de la Cadena y Producto</h3>
+                    <span class="arrow">▼</span>
+                </summary>
+                <div class="lesson-content">
+                    <h4>Funciones Compuestas</h4>
+                    <p>Espacio reservado para explicar cómo derivar funciones dentro de otras funciones.</p>
+                    <p><em>(Escribe aquí tus apuntes sobre la regla de la cadena)</em></p>
+                </div>
+            </details>
 
-      <!-- UNIDAD 2 -->
-      <!-- FIX: id único "unidad-producto" para el bloque, ids únicos "leccion-producto" y "leccion-cociente" para los items -->
-      <div class="unit" id="unidad-producto">
-        <div class="unit-head">
-          <div class="uh-left">
-            <div class="uh-icon b"><i class="ti ti-math-symbols"></i></div>
-            <div>
-              <div class="uh-name">Unidad 2 · Reglas de Derivación</div>
-              <div class="uh-sub">Producto, cociente y regla de la cadena</div>
-            </div>
-          </div>
-          <div class="status-pill active">Disponible</div>
-        </div>
-        <div class="lessons-list">
-          <!-- FIX: renombrado de id="producto" → id="leccion-producto" -->
-          <a class="lesson-item" href="leccion.html?id=5" id="leccion-producto">
-            <div class="li-num active">5</div>
-            <div class="li-info">
-              <div class="li-name">Regla del producto</div>
-              <div class="li-desc">Deriva el producto de dos funciones sin expandir</div>
-              <div class="li-formula">(u·v)' = u'v + uv'</div>
-            </div>
-            <i class="ti ti-chevron-right li-action"></i>
-          </a>
-          <!-- FIX: renombrado de id="cociente" → id="leccion-cociente" -->
-          <a class="lesson-item" href="leccion.html?id=6" id="leccion-cociente">
-            <div class="li-num active">6</div>
-            <div class="li-info">
-              <div class="li-name">Regla del cociente</div>
-              <div class="li-desc">Cuidado con el signo negativo en el numerador</div>
-              <div class="li-formula">(u/v)' = (u'v − uv') / v²</div>
-            </div>
-            <i class="ti ti-chevron-right li-action"></i>
-          </a>
-        </div>
-      </div>
+            <!-- Unidad 4 (Nueva) -->
+            <details id="unidad4" class="lesson-card">
+                <summary class="lesson-header">
+                    <span class="icon">📈</span>
+                    <h3>Unidad 4: Aplicaciones de la Derivada</h3>
+                    <span class="arrow">▼</span>
+                </summary>
+                <div class="lesson-content">
+                    <h4>Máximos, Mínimos y Gráficas</h4>
+                    <p>Espacio reservado para optimización y análisis de curvas.</p>
+                    <p><em>(Escribe aquí tus apuntes sobre criterios de la primera y segunda derivada)</em></p>
+                </div>
+            </details>
 
-      <!-- UNIDAD 4 (bloqueada) -->
-      <!-- FIX: opacity movida a clase CSS "unit--locked" en lugar de style inline -->
-      <div class="unit unit--locked">
-        <div class="unit-head">
-          <div class="uh-left">
-            <div class="uh-icon p"><i class="ti ti-chart-line"></i></div>
-            <div>
-              <div class="uh-name">Unidad 4 · Aplicaciones</div>
-              <div class="uh-sub">Rectas tangentes, optimización, L'Hôpital</div>
-            </div>
-          </div>
-          <div class="status-pill locked">
-            <!-- FIX: font-size del icono movido a clase CSS "lock-icon" -->
-            <i class="ti ti-lock lock-icon"></i>Próximamente
-          </div>
-        </div>
-      </div>
-
+        </main>
     </div>
-  </div>
-
-  <script src="scrpts/sidebar.js"></script>
+    <!-- Vinculamos el JS específico -->
+    <script src="scrpts/leccion.js"></script>
 </body>
-
 </html>
