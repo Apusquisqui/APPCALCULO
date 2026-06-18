@@ -1,75 +1,147 @@
+/* ============================================
+   REGISTRO.CSS
+   Estilos específicos de la página de registro.
+   El fondo oscuro, la barra lateral y el topbar ya
+   vienen de general.css (compartido con el resto de
+   la app); aquí solo se define el panel del formulario
+   y el bloque de resultado.
+   ============================================ */
+
+/* Igual que en otras páginas internas, limitamos el ancho de lectura */
+.content {
+  padding: 24px;
+  max-width: 860px;
+}
+
+/* Fuente que querías conservar para el título de esta página.
+   Nota: 'Elephant' solo se ve si el visitante la tiene instalada
+   localmente (viene con Office); el resto verá el sans-serif de
+   respaldo, ya que no hay un archivo de fuente embebido. */
 @font-face {
   font-family: 'Elephant';
   src: local('Elephant');
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
+.font-elephant {
+  font-family: 'Elephant', sans-serif;
 }
 
-h1 {
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-family: 'Abril Fatface', serif;
-}
-
-.container {
-  max-width: 800px;
-  margin: auto;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+/* ── PANEL DEL FORMULARIO ── */
+/* Misma lógica visual que .unit en lecciones: tarjeta plana con
+   borde sutil sobre el fondo oscuro de la app */
+.registro-panel {
+  background: var(--bg1);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
 }
 
 .campo-label {
   display: block;
   font-size: 13px;
-  font-weight: 600;
-  color: #333;
-  margin-top: 10px;
+  font-weight: 700;
+  color: var(--muted);
+  margin-top: 14px;
+  margin-bottom: 6px;
 }
 
-table {
+.campo-label:first-child {
+  margin-top: 0;
+}
+
+#registroForm input[type="text"],
+#registroForm input[type="number"],
+#registroForm select {
   width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
+  padding: 10px 12px;
+  background: var(--bg0);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 14px;
+  box-sizing: border-box;
 }
 
-th,
-td {
-  padding: 10px;
-  border: 1px solid #ccc;
-  text-align: left;
+#registroForm input::placeholder {
+  color: var(--muted);
 }
 
-th {
-  background-color: #007bff;
-  color: white;
-}
-
-input[type="text"],
-input[type="number"],
-select {
-  width: calc(100% - 22px);
-  padding: 10px;
-  margin: 6px 0 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-input[type="submit"] {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
+#registroForm select {
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
-  background-color: #0056b3;
+/* Estado deshabilitado de los campos tras el único envío permitido */
+#registroForm input:disabled,
+#registroForm select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-registro {
+  margin-top: 20px;
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn-registro:hover {
+  opacity: 0.9;
+}
+
+.btn-registro:disabled {
+  background: var(--bg2);
+  color: var(--muted);
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+/* ── RESULTADO (se pinta una sola vez) ── */
+.registro-resultado {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.rr-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.rr-lista {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  row-gap: 8px;
+  margin: 0;
+}
+
+.rr-lista dt {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.rr-lista dd {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.rr-nota {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--muted);
 }

@@ -1,32 +1,64 @@
+/* ============================================
+   REGISTRO.JS
+   Lógica del formulario de registro de personas.
 
+   Regla actual: el formulario solo se puede enviar una vez por
+   sesión. Al enviarlo, se muestran los datos capturados en un
+   panel de resultado y se deshabilita todo el formulario para
+   impedir un segundo envío.
 
-document.getElementById('registroForm').addEventListener('submit', function (event) {
+   No hay conexión a base de datos todavía: los datos viven solo
+   en memoria/DOM mientras la pestaña está abierta. La función
+   mostrarResultado() es el punto donde, más adelante, se
+   reemplazará la simple visualización por un envío real (fetch)
+   hacia el backend.
+   ============================================ */
+
+const form = document.getElementById('registroForm');
+const resultado = document.getElementById('registroResultado');
+const botonRegistrar = document.getElementById('btn-registro');
+
+form.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  const nombre = document.getElementById('nombre').value;
-  const apellidos = document.getElementById('apellidos').value;
-  const edad = document.getElementById('edad').value;
-  const sexo = document.getElementById('sexo').value;
-  const descripcion = document.getElementById('descripcion').value;
-
-  agregarFila(nombre, apellidos, edad, sexo, descripcion);
-
-  this.reset();
+  const datos = leerDatosFormulario();
+  mostrarResultado(datos);
+  bloquearFormulario();
 });
 
 /**
- * Inserta una nueva fila en la tabla de registros con los datos
- * capturados del formulario.
+ * Lee los valores actuales de los campos del formulario y los
+ * devuelve como un objeto simple.
  */
-function agregarFila(nombre, apellidos, edad, sexo, descripcion) {
-  const tabla = document.getElementById('tablaRegistro').getElementsByTagName('tbody')[0];
-  const nuevaFila = tabla.insertRow();
+function leerDatosFormulario() {
+  return {
+    nombre: document.getElementById('nombre').value,
+    apellidos: document.getElementById('apellidos').value,
+    edad: document.getElementById('edad').value,
+    sexo: document.getElementById('sexo').value,
+    descripcion: document.getElementById('descripcion').value
+  };
+}
 
-  nuevaFila.innerHTML = `
-    <td>${nombre}</td>
-    <td>${apellidos}</td>
-    <td>${edad}</td>
-    <td>${sexo}</td>
-    <td>${descripcion}</td>
-  `;
+/**
+ * Pinta los datos capturados en el panel de resultado y lo hace visible.
+ */
+function mostrarResultado(datos) {
+  document.getElementById('rrNombre').textContent = datos.nombre;
+  document.getElementById('rrApellidos').textContent = datos.apellidos;
+  document.getElementById('rrEdad').textContent = datos.edad;
+  document.getElementById('rrSexo').textContent = datos.sexo;
+  document.getElementById('rrDescripcion').textContent = datos.descripcion;
+
+  resultado.hidden = false;
+}
+
+/**
+ * Deshabilita todos los campos y el botón para impedir un segundo registro.
+ */
+function bloquearFormulario() {
+  Array.from(form.elements).forEach(function (campo) {
+    campo.disabled = true;
+  });
+  botonRegistrar.textContent = 'Datos registrados';
 }

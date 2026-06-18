@@ -4,58 +4,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de personas</title>
-    <link rel="stylesheet" href="estilos/toREgistro.css">
+    <title>Registro — LoopMath</title>
     <link rel="stylesheet" href="estilos/general.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/registro.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <!-- pack estilos-->
 </head>
 
 <body>
 
-    <div class="container">
-        <h1>Registro de personas</h1>
+    <nav class="sidebar" id="sidebar">
+        <a class="sb-logo" href="index.html">
+            <div class="sb-logo-icon"><i class="ti ti-math-function"></i></div>
+            <span class="sb-logo-text">LoopMath</span>
+        </a>
 
-        <form id="registroForm">
-            <label class="campo-label" for="nombre">Nombre</label>
-            <input type="text" id="nombre" placeholder="Nombre" required>
+        <a class="sb-item" data-page="index.html" href="index.html">
+            <i class="ti ti-home" aria-hidden="true"></i>
+            <span class="sb-item-label">Inicio</span>
+        </a>
+        <a class="sb-item" data-page="lecciones.html" href="lecciones.html">
+            <i class="ti ti-book" aria-hidden="true"></i>
+            <span class="sb-item-label">Lecciones</span>
+        </a>
+        <a class="sb-item" data-page="practica.html" href="practica.html">
+            <i class="ti ti-pencil" aria-hidden="true"></i>
+            <span class="sb-item-label">Práctica</span>
+        </a>
+        <a class="sb-item" data-page="clasificacion.html" href="clasificacion.html">
+            <i class="ti ti-trophy" aria-hidden="true"></i>
+            <span class="sb-item-label">Clasificación</span>
+        </a>
 
-            <label class="campo-label" for="apellidos">Apellidos</label>
-            <input type="text" id="apellidos" placeholder="Apellidos" required>
+        <div class="sb-divider"></div>
 
-            <label class="campo-label" for="edad">Edad</label>
-            <input type="number" id="edad" placeholder="Edad" required>
+        <a class="sb-item" data-page="formulario.html" href="formulario.html">
+            <i class="ti ti-notebook" aria-hidden="true"></i>
+            <span class="sb-item-label">Formulario</span>
+        </a>
+        <a class="sb-item" data-page="ajustes.html" href="ajustes.html">
+            <i class="ti ti-settings" aria-hidden="true"></i>
+            <span class="sb-item-label">Ajustes</span>
+        </a>
 
-            <label class="campo-label" for="sexo">Sexo</label>
-            <select id="sexo" required>
-                <option value="" disabled selected>Selecciona una opción</option>
-                <option value="Masculino">Masculino</option>
-                <option value="Femenino">Femenino</option>
-            </select>
+        <button class="sb-toggle" id="sb-toggle" aria-label="Expandir menú">
+            <i class="ti ti-chevrons-right" aria-hidden="true"></i>
+            <span class="sb-toggle-label">Colapsar</span>
+        </button>
+    </nav>
 
-            <label class="campo-label" for="descripcion">Descripción</label>
-            <input type="text" id="descripcion" placeholder="Descripción" required>
+    <div class="page-main">
+        <header class="topbar">
+            <div>
+                <div class="topbar-title font-elephant">Registro</div>
+                <div class="topbar-sub">Ingresa tus datos una sola vez para comenzar</div>
+            </div>
+        </header>
 
-            <input type="submit" value="Agregar Persona">
-        </form>
+        <div class="content">
 
-        <table id="tablaRegistro">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellidos</th>
-                    <th>Edad</th>
-                    <th>Sexo</th>
-                    <th>Descripción</th>
-                </tr>
-            </thead>
-            <tbody>
+            <div class="registro-panel">
 
-            </tbody>
-        </table>
+                <form id="registroForm">
+                    <label class="campo-label" for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Nombre" required>
+
+                    <label class="campo-label" for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" placeholder="Apellidos" required>
+
+                    <label class="campo-label" for="edad">Edad</label>
+                    <input type="number" id="edad" placeholder="Edad" required>
+
+                    <label class="campo-label" for="sexo">Sexo</label>
+                    <select id="sexo" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </select>
+
+                    <label class="campo-label" for="descripcion">Descripción</label>
+                    <input type="text" id="descripcion" placeholder="Descripción" required>
+
+                    <button type="submit" class="btn-registro" id="btn-registro">Registrar datos</button>
+                </form>
+
+                <!-- Se muestra solo después de enviar el formulario, una única vez -->
+                <div class="registro-resultado" id="registroResultado" hidden>
+                    <div class="rr-title">
+                        <i class="ti ti-circle-check" aria-hidden="true"></i>
+                        Datos registrados
+                    </div>
+                    <dl class="rr-lista">
+                        <dt>Nombre</dt>
+                        <dd id="rrNombre"></dd>
+                        <dt>Apellidos</dt>
+                        <dd id="rrApellidos"></dd>
+                        <dt>Edad</dt>
+                        <dd id="rrEdad"></dd>
+                        <dt>Sexo</dt>
+                        <dd id="rrSexo"></dd>
+                        <dt>Descripción</dt>
+                        <dd id="rrDescripcion"></dd>
+                    </dl>
+                    <div class="rr-nota">
+                        Por ahora estos datos solo viven en esta sesión del navegador. Cuando conectemos la base de
+                        datos,
+                        este es el punto donde se enviarían en lugar de solo mostrarse aquí.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
-    <script src="scrpts/toREgistro.js"></script>
+    <script src="scrpts/sidebar.js"></script>
+    <script src="scrpts/registro.js"></script>
 </body>
 
 </html>
