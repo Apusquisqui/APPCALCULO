@@ -2,63 +2,60 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro de personas</title>
-  <link rel="stylesheet" href="estilos/toREgistro.css">
-  <link rel="stylesheet" href="estilos/general.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de personas</title>
+    <link rel="stylesheet" href="estilos/toREgistro.css">
+    <link rel="stylesheet" href="estilos/general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>Registro de personas</h1>
+    <div class="container">
+        <h1>Registro de personas</h1>
 
-    <form id="registroForm">
-      <label class="campo-label" for="nombre">Nombre</label>
-      <input type="text" id="nombre" placeholder="Nombre" required>
+        <form id="registroForm">
+            <label class="campo-label" for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Nombre" required>
 
-      <label class="campo-label" for="apellidos">Apellidos</label>
-      <input type="text" id="apellidos" placeholder="Apellidos" required>
+            <label class="campo-label" for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" placeholder="Apellidos" required>
 
-      <label class="campo-label" for="edad">Edad</label>
-      <input type="number" id="edad" placeholder="Edad" required>
+            <label class="campo-label" for="edad">Edad</label>
+            <input type="number" id="edad" placeholder="Edad" required>
 
-      <label class="campo-label" for="sexo">Sexo</label>
-      <select id="sexo" required>
-        <option value="" disabled selected>Selecciona una opción</option>
-        <option value="Masculino">Masculino</option>
-        <option value="Femenino">Femenino</option>
-      </select>
+            <label class="campo-label" for="sexo">Sexo</label>
+            <select id="sexo" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </select>
 
-      <label class="campo-label" for="descripcion">Descripción</label>
-      <input type="text" id="descripcion" placeholder="Descripción" required>
+            <label class="campo-label" for="descripcion">Descripción</label>
+            <input type="text" id="descripcion" placeholder="Descripción" required>
 
-      <input type="submit" value="Agregar Persona">
-    </form>
+            <input type="submit" value="Agregar Persona">
+        </form>
 
-    <table id="tablaRegistro">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Apellidos</th>
-          <th>Edad</th>
-          <th>Sexo</th>
-          <th>Descripción</th>
-        </tr>
-      </thead>
-      <tbody>
+        <table id="tablaRegistro">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Edad</th>
+                    <th>Sexo</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
 
-      </tbody>
-    </table>
-  </div>
+            </tbody>
+        </table>
+    </div>
 
-  <!-- El script va al final del body: registro.js engancha el evento
-       "submit" sobre el formulario al cargar, así que el formulario
-       debe existir en el DOM antes de que el script se ejecute. -->
-  <script src="scrpts/registro.js"></script>
+    <script src="scrpts/toREgistro.js"></script>
 </body>
 
 </html>
