@@ -58,7 +58,7 @@
       <!-- UNIDAD 1 -->
       <!-- FIX: id único "unidad-potencias" en lugar de "potencias" (evita colisión con lesson-item de abajo) -->
       <div class="unit" id="unidad-potencias">
-        <div class="unit-head" onclick="toggleUnit('unidad-potencias')">
+         <div class="unit-head" onclick="toggleUnit('unidad-potencias')">
           <div class="uh-left">
             <div class="uh-icon g"><i class="ti ti-superscript"></i></div>
             <div>
@@ -71,6 +71,9 @@
             <i class="ti ti-chevron-down uh-toggle"></i>
           </div>
         </div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <i class="ti ti-chevron-down uh-toggle"></i>
+          </div>
         <div class="lessons-list">
           <a class="lesson-item" href="leccion.html?id=1">
             <div class="li-num done">1</div>
@@ -142,7 +145,7 @@
         </div>
       </div>
 
-      <!-- UNIDAD 3 (NUEVA - Espacio para contenido) -->
+            <!-- UNIDAD 3 (NUEVA - Espacio para contenido) -->
       <div class="unit" id="unidad-derivadas-avanzadas">
         <div class="unit-head" onclick="toggleUnit('unidad-derivadas-avanzadas')">
           <div class="uh-left">
@@ -226,14 +229,6 @@
               <div class="uh-sub">Rectas tangentes, optimización, L'Hôpital</div>
             </div>
           </div>
-          <div class="status-pill locked">
-            <!-- FIX: font-size del icono movido a clase CSS "lock-icon" -->
-            <i class="ti ti-lock lock-icon"></i>Próximamente
-          </div>
-        </div>
-      </div>
-
-    </div>
   </div>
 
   <script src="scrpts/sidebar.js"></script>
