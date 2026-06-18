@@ -68,6 +68,13 @@
    gap: 12px;
  }
 
+ /* Contenedor derecho de la cabecera: agrupa el pill de estado y el ícono toggle */
+.uh-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
  /* Configuramos el ícono cuadrado de la unidad */
  .uh-icon {
    width: 40px;
