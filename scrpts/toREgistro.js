@@ -21,7 +21,8 @@ form.addEventListener('submit', async function (event) {
   const datos = leerDatosFormulario();
 
   try {
-    const respuesta = await fetch('scrpts/registro.php', {
+    // CORRECCIÓN: Apuntar al archivo PHP real 'toRegistrophp.php'
+    const respuesta = await fetch('scrpts/toRegistrophp.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(datos)
@@ -40,7 +41,8 @@ form.addEventListener('submit', async function (event) {
     }
 
   } catch (err) {
-    mostrarError('No se pudo conectar con el servidor. Verifica que XAMPP esté activo.');
+    // CORRECCIÓN: Mensaje adaptado a tu servidor en producción (Plesk)
+    mostrarError('No se pudo conectar con el servidor de LoopMath. Inténtalo de nuevo.');
     botonRegistrar.disabled = false;
     botonRegistrar.textContent = 'Registrar datos';
   }
@@ -79,7 +81,6 @@ function bloquearFormulario() {
 }
 
 function mostrarError(mensaje) {
-  // Reutilizar o crear un párrafo de error debajo del botón
   let errEl = document.getElementById('registro-error');
   if (!errEl) {
     errEl = document.createElement('p');
