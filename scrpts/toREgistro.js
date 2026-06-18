@@ -22,7 +22,7 @@ form.addEventListener('submit', async function (event) {
 
   try {
     // CORRECCIÓN: Apuntar al archivo PHP real 'toRegistrophp.php'
-    const respuesta = await fetch('scrpts/toRegistrophp.php', {
+    const respuesta = await fetch('https://emiliano.castelancarpinteyro.com/scrpts/toREgistrophp.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(datos)
