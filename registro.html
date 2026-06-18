@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="estilos/general.css">
     <link rel="stylesheet" href="estilos/toREgistro.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <!-- pack estilos sirven para el formulario de registro -->
 </head>
 
 <body>
@@ -70,7 +69,6 @@
                     <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
                         title="El nombre solo debe contener letras." required>
 
-
                     <label class="campo-label" for="apellidos">Apellidos</label>
                     <input type="text" id="apellidos" name="apellidos" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
                         title="Los apellidos solo deben contener letras." required>
@@ -85,13 +83,16 @@
                         <option value="Femenino">Femenino</option>
                     </select>
 
-                    <label class="campo-label" for="descripcion">Descripción</label>
-                    <input type="text" id="descripcion" name="descripcion" placeholder="Descripción" required>
+                    <label class="campo-label" for="usuario">Usuario</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Elige un nombre de usuario" required>
+
+                    <label class="campo-label" for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" name="contrasena" placeholder="Escribe tu contraseña"
+                        required>
 
                     <button type="submit" class="btn-registro" id="btn-registro">Registrar datos</button>
                 </form>
 
-                <!-- Se muestra solo después de enviar el formulario, una única vez -->
                 <div class="registro-resultado" id="registroResultado" hidden>
                     <div class="rr-title">
                         <i class="ti ti-circle-check" aria-hidden="true"></i>
@@ -106,13 +107,14 @@
                         <dd id="rrEdad"></dd>
                         <dt>Sexo</dt>
                         <dd id="rrSexo"></dd>
-                        <dt>Descripción</dt>
-                        <dd id="rrDescripcion"></dd>
+                        <dt>Usuario</dt>
+                        <dd id="rrUsuario"></dd>
+                        <dt>Contraseña</dt>
+                        <dd id="rrContrasena"></dd>
                     </dl>
                     <div class="rr-nota">
                         Por ahora estos datos solo viven en esta sesión del navegador. Cuando conectemos la base de
-                        datos,
-                        este es el punto donde se enviarían en lugar de solo mostrarse aquí.
+                        datos, este es el punto donde se enviarían en lugar de solo mostrarse aquí.
                     </div>
                 </div>
 
