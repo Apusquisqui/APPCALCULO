@@ -4,12 +4,13 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
-$host    = 'localhost:3306 ';
+$host    = 'localhost';
 $db      = 'loopmathsesion';
 $user    = 'emi';
 $pass    = '#APUSQUISQUI';
 $charset = 'utf8mb4';
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+
+$dsn = "mysql:host=$host;port=3306;dbname=$db;charset=$charset";
 
 try {
     $pdo = new PDO($dsn, $user, $pass, [
