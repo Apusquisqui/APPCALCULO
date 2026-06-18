@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Manejar el desplazamiento suave a la sección anclada
+    // Maneja el desplazamiento suave a la sección anclada
     if (window.location.hash) {
         const targetId = window.location.hash.substring(1);
         const targetElement = document.getElementById(targetId);
