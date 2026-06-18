@@ -67,10 +67,11 @@
 
                 <form id="registroForm">
                     <label class="campo-label" for="nombre">Nombre</label>
-                    <input type="text" id="nombre" placeholder="Nombre" required>
+                    <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" title="El nombre solo debe contener letras." required>
+
 
                     <label class="campo-label" for="apellidos">Apellidos</label>
-                    <input type="text" id="apellidos" placeholder="Apellidos" required>
+                    <input type="text" id="apellidos" name="apellidos" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" title="Los apellidos solo deben contener letras." required>
 
                     <label class="campo-label" for="edad">Edad</label>
                     <input type="number" id="edad" placeholder="Edad" required>
