@@ -1,18 +1,4 @@
-/* ============================================
-   REGISTRO.JS
-   Lógica del formulario de registro de personas.
 
-   Regla actual: el formulario solo se puede enviar una vez por
-   sesión. Al enviarlo, se muestran los datos capturados en un
-   panel de resultado y se deshabilita todo el formulario para
-   impedir un segundo envío.
-
-   No hay conexión a base de datos todavía: los datos viven solo
-   en memoria/DOM mientras la pestaña está abierta. La función
-   mostrarResultado() es el punto donde, más adelante, se
-   reemplazará la simple visualización por un envío real (fetch)
-   hacia el backend.
-   ============================================ */
 
 const form = document.getElementById('registroForm');
 const resultado = document.getElementById('registroResultado');
@@ -40,9 +26,7 @@ function leerDatosFormulario() {
   };
 }
 
-/**
- * Pinta los datos capturados en el panel de resultado y lo hace visible.
- */
+
 function mostrarResultado(datos) {
   document.getElementById('rrNombre').textContent = datos.nombre;
   document.getElementById('rrApellidos').textContent = datos.apellidos;
@@ -53,9 +37,6 @@ function mostrarResultado(datos) {
   resultado.hidden = false;
 }
 
-/**
- * Deshabilita todos los campos y el botón para impedir un segundo registro.
- */
 function bloquearFormulario() {
   Array.from(form.elements).forEach(function (campo) {
     campo.disabled = true;

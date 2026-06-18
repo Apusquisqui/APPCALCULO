@@ -1,22 +1,9 @@
-/* ============================================
-   REGISTRO.CSS
-   Estilos específicos de la página de registro.
-   El fondo oscuro, la barra lateral y el topbar ya
-   vienen de general.css (compartido con el resto de
-   la app); aquí solo se define el panel del formulario
-   y el bloque de resultado.
-   ============================================ */
 
-/* Igual que en otras páginas internas, limitamos el ancho de lectura */
 .content {
   padding: 24px;
   max-width: 860px;
 }
 
-/* Fuente que querías conservar para el título de esta página.
-   Nota: 'Elephant' solo se ve si el visitante la tiene instalada
-   localmente (viene con Office); el resto verá el sans-serif de
-   respaldo, ya que no hay un archivo de fuente embebido. */
 @font-face {
   font-family: 'Elephant';
   src: local('Elephant');
@@ -26,9 +13,6 @@
   font-family: 'Elephant', sans-serif;
 }
 
-/* ── PANEL DEL FORMULARIO ── */
-/* Misma lógica visual que .unit en lecciones: tarjeta plana con
-   borde sutil sobre el fondo oscuro de la app */
 .registro-panel {
   background: var(--bg1);
   border: 1px solid var(--border);
