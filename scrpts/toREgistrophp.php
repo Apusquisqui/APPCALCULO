@@ -4,7 +4,7 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
-$host    = 'localhost';
+$host    = 'localhost:3306 ';
 $db      = 'loopmathsesion';
 $user    = 'emi';
 $pass    = '#APUSQUISQUI';
