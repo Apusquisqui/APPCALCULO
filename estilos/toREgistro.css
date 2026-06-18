@@ -1,12 +1,3 @@
-/* ============================================
-   REGISTRO.CSS
-   Estilos del formulario de registro de personas.
-   ============================================ */
-
-/* Fuente decorativa para el título.
-   Nota: 'Elephant' solo se ve si el usuario la tiene instalada en su
-   sistema (no hay archivo de fuente embebido), así que en la mayoría
-   de los casos el navegador caerá de vuelta al sans-serif. */
 @font-face {
   font-family: 'Elephant';
   src: local('Elephant');
@@ -14,14 +5,6 @@
 
 body {
   font-family: Arial, sans-serif;
-  /* Nota: esta URL es un enlace temporal de caché de imágenes de Google
-     (encrypted-tbn0.gstatic.com). Puede dejar de funcionar en cualquier
-     momento y no es una imagen propia. Te recomiendo sustituirla por una
-     imagen que sí controles o por un gradiente CSS. */
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSKO7Gnd8UqOYH2KTNpyFl0hwZ_uUDyKuJtw&s');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   margin: 0;
   padding: 20px;
 }
@@ -30,7 +13,7 @@ h1 {
   text-align: center;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-family: 'Elephant', sans-serif;
+  font-family: 'Abril Fatface', serif;
 }
 
 .container {
@@ -42,10 +25,6 @@ h1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Etiqueta visible y discreta para cada campo. Se agregó para que
-   cada input/select tenga un nombre accesible (antes el <select>
-   dependía solo de una <option> de marcador, lo cual no es accesible
-   para lectores de pantalla). */
 .campo-label {
   display: block;
   font-size: 13px;
