@@ -67,14 +67,16 @@
 
                 <form id="registroForm">
                     <label class="campo-label" for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" title="El nombre solo debe contener letras." required>
+                    <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
+                        title="El nombre solo debe contener letras." required>
 
 
                     <label class="campo-label" for="apellidos">Apellidos</label>
-                    <input type="text" id="apellidos" name="apellidos" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+" title="Los apellidos solo deben contener letras." required>
+                    <input type="text" id="apellidos" name="apellidos" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
+                        title="Los apellidos solo deben contener letras." required>
 
                     <label class="campo-label" for="edad">Edad</label>
-                    <input type="number" id="edad" placeholder="Edad" required>
+                    <input type="number" id="edad" name="edad" min="0" max="120" placeholder="Edad" required>
 
                     <label class="campo-label" for="sexo">Sexo</label>
                     <select id="sexo" required>
@@ -84,7 +86,7 @@
                     </select>
 
                     <label class="campo-label" for="descripcion">Descripción</label>
-                    <input type="text" id="descripcion" placeholder="Descripción" required>
+                    <input type="text" id="descripcion" name="descripcion" placeholder="Descripción" required>
 
                     <button type="submit" class="btn-registro" id="btn-registro">Registrar datos</button>
                 </form>
