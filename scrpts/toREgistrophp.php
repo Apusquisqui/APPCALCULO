@@ -4,13 +4,11 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
-// ── Configuración de conexión ──────────────────────────────────────────────
-$host   = 'localhost';
-$db     = 'loopmathsesion';   // nombre exacto de tu BD en HeidiSQL
-$user   = 'root';             // usuario MySQL de XAMPP
-$pass   = '';                 // contraseña (vacía por defecto en XAMPP)
+$host    = 'localhost';
+$db      = 'loopmathsesion';
+$user    = 'emi';
+$pass    = '#APUSQUISQUI';
 $charset = 'utf8mb4';
-
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 
 try {
