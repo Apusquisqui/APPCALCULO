@@ -68,7 +68,6 @@ function mostrarResultado(datos) {
   document.getElementById('rrUsuario').textContent = datos.usuario;
   document.getElementById('rrContrasena').textContent = '•'.repeat(datos.contrasena.length);
 
-  // Quitar nota de "solo en sesión" ahora que hay BD real
   const nota = document.querySelector('.rr-nota');
   if (nota) nota.remove();
 
