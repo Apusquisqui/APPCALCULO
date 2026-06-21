@@ -69,11 +69,11 @@
  }
 
  /* Contenedor derecho de la cabecera: agrupa el pill de estado y el ícono toggle */
-.uh-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+ .uh-right {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+ }
 
  /* Configuramos el ícono cuadrado de la unidad */
  .uh-icon {
@@ -242,4 +242,274 @@
 
  .lesson-item:hover .li-action {
    color: var(--text);
+ }
+
+ /* ════════════════════════════════════════════════════════════
+   leccionDetalle.css
+   Estilos exclusivos de leccion.html (página de teoría completa).
+   Reutiliza las variables de color definidas en general.css
+   (--bg0, --bg1, --bg2, --border, --text, --muted, --accent, --blue, --orange)
+   ════════════════════════════════════════════════════════════ */
+
+ /* Contenido un poco más ancho que el índice, para dar espacio a las fórmulas */
+ .content--ancho {
+   max-width: 920px;
+ }
+
+ /* Enlace para volver al índice de lecciones */
+ .volver-link {
+   display: inline-flex;
+   align-items: center;
+   gap: 6px;
+   font-size: 13px;
+   color: var(--muted);
+   text-decoration: none;
+   margin-bottom: 20px;
+   transition: color 0.15s;
+ }
+
+ .volver-link:hover {
+   color: var(--text);
+ }
+
+ /* ── DIVISOR DE UNIDAD ── */
+ /* Marca el inicio de cada unidad dentro de la página larga de teoría */
+ .unit-divider {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   margin: 36px 0 16px;
+ }
+
+ .unit-divider:first-of-type {
+   margin-top: 0;
+ }
+
+ .unit-divider-badge {
+   font-size: 11px;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: .04em;
+   padding: 4px 10px;
+   border-radius: 4px;
+   flex-shrink: 0;
+ }
+
+ /* Reutilizamos la misma paleta plana de los íconos de unidad en lecciones.html */
+ .unit-divider-badge.g {
+   background: rgba(76, 175, 80, 0.1);
+   color: var(--accent);
+ }
+
+ .unit-divider-badge.b {
+   background: rgba(33, 150, 243, 0.1);
+   color: var(--blue);
+ }
+
+ .unit-divider-badge.o {
+   background: rgba(255, 152, 0, 0.1);
+   color: var(--orange);
+ }
+
+ .unit-divider-badge.p {
+   background: rgba(156, 39, 176, 0.1);
+   color: #a88fff;
+ }
+
+ .unit-divider-title {
+   font-size: 14px;
+   font-weight: 700;
+   color: var(--text);
+ }
+
+ /* ── ACORDEÓN DE LECCIÓN (<details>) ── */
+ .lesson-detail {
+   background: var(--bg1);
+   border: 1px solid var(--border);
+   border-radius: 8px;
+   margin-bottom: 12px;
+   overflow: hidden;
+ }
+
+ /* Quitamos el marcador triangular nativo del navegador */
+ .lesson-detail summary {
+   list-style: none;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   gap: 14px;
+   padding: 14px 20px;
+ }
+
+ .lesson-detail summary::-webkit-details-marker {
+   display: none;
+ }
+
+ .lesson-detail summary:hover {
+   background: var(--bg2);
+ }
+
+ /* Círculo con el número de lección, mismo lenguaje visual que .li-num en el índice */
+ .ld-num {
+   width: 28px;
+   height: 28px;
+   border-radius: 50%;
+   flex-shrink: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 12px;
+   font-weight: 700;
+   background: transparent;
+   border: 2px solid var(--blue);
+   color: var(--blue);
+ }
+
+ .ld-title {
+   flex: 1;
+   font-size: 14px;
+   font-weight: 700;
+   color: var(--text);
+ }
+
+ .chevron-icon {
+   font-size: 18px;
+   color: var(--muted);
+   transition: transform 0.2s ease;
+ }
+
+ .lesson-detail[open] summary .chevron-icon {
+   transform: rotate(180deg);
+ }
+
+ /* Cuerpo interno de cada lección */
+ .lesson-body {
+   padding: 4px 24px 24px;
+   border-top: 1px solid var(--border);
+ }
+
+ /* Encabezado de cada sub-sección dentro de una lección (Concepto, Fórmula, etc.) */
+ .seccion-titulo {
+   font-size: 11px;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: .06em;
+   color: var(--muted);
+   margin: 20px 0 8px;
+ }
+
+ .lesson-body .seccion-titulo:first-of-type {
+   margin-top: 18px;
+ }
+
+ /* Texto explicativo normal */
+ .teoria-texto {
+   font-size: 14px;
+   line-height: 1.6;
+   color: var(--text);
+ }
+
+ /* ── FÓRMULA DESTACADA ── */
+ /* Caja centrada para la fórmula principal de la lección, renderizada con KaTeX */
+ .formula-destacada {
+   background: var(--bg0);
+   border: 1px solid var(--border);
+   border-radius: 6px;
+   padding: 18px;
+   text-align: center;
+   font-size: 17px;
+   overflow-x: auto;
+   /* por si la fórmula es muy ancha en pantallas pequeñas */
+ }
+
+ /* ── PIZARRA DE PASOS ── */
+ /* Contenedor que muestra la evolución algebraica del ejemplo resuelto */
+ .pizarra {
+   display: flex;
+   flex-direction: column;
+   gap: 0;
+   border: 1px solid var(--border);
+   border-radius: 6px;
+   overflow: hidden;
+ }
+
+ .pizarra-paso {
+   display: flex;
+   align-items: flex-start;
+   gap: 14px;
+   padding: 14px 18px;
+   border-bottom: 1px solid var(--border);
+   background: var(--bg0);
+ }
+
+ .pizarra-paso:last-child {
+   border-bottom: none;
+ }
+
+ .paso-num {
+   width: 26px;
+   height: 26px;
+   border-radius: 50%;
+   flex-shrink: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 12px;
+   font-weight: 700;
+   background: var(--accent);
+   color: #fff;
+   margin-top: 2px;
+ }
+
+ .paso-contenido {
+   flex: 1;
+ }
+
+ .paso-texto {
+   font-size: 13px;
+   color: var(--muted);
+   margin-bottom: 4px;
+ }
+
+ .paso-expr {
+   font-size: 15px;
+   color: var(--text);
+ }
+
+ /* ── ERRORES COMUNES ── */
+ /* Caja de advertencia para resaltar fallos típicos del estudiante */
+ .errores-comunes {
+   background: rgba(255, 87, 34, 0.08);
+   border: 1px solid rgba(255, 87, 34, 0.25);
+   border-left: 3px solid var(--orange);
+   border-radius: 6px;
+   padding: 14px 18px;
+ }
+
+ .errores-comunes ul {
+   margin: 0;
+   padding-left: 18px;
+ }
+
+ .errores-comunes li {
+   font-size: 13px;
+   line-height: 1.6;
+   color: var(--text);
+ }
+
+ .errores-comunes li+li {
+   margin-top: 6px;
+ }
+
+ /* ── BLOQUE PENDIENTE ── */
+ /* Placeholder visual: marca claramente dónde falta escribir teoría todavía */
+ .bloque-pendiente {
+   border: 1px dashed var(--border);
+   border-radius: 6px;
+   padding: 14px 18px;
+   font-size: 13px;
+   font-style: italic;
+   color: var(--muted);
+   line-height: 1.6;
+   background: transparent;
  }

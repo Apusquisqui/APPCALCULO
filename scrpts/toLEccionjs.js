@@ -24,3 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 }); //Sirver para manejar el desplazamiento suave a la sección anclada cuando se carga la página. Si la sección es un elemento <details>, se asegura de que esté       
 //  abierto antes de desplazarse hacia ella. Además, se agrega un efecto visual temporal para resaltar la sección objetivo.
+
+// Recorre todo el documento y convierte los delimitadores $...$ 
+// y $$...$$ (en bloque) en notación matemática renderizada con KaTeX.
+// Debe cargarse DESPUÉS de katex.min.js y auto-render.min.js (ver leccion.html).
+document.addEventListener('DOMContentLoaded', () => {
+  renderMathInElement(document.body, {
+    delimiters: [
+      { left: '$$', right: '$$', display: true },
+      { left: '$', right: '$', display: false }
+    ],
+    throwOnError: false // un error de sintaxis en una fórmula no debe romper toda la página
+  });
+});

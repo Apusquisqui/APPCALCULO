@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teoría — LoopMath</title>
+
+  <!-- Estilos compartidos del sidebar/topbar/contenido + estilos nuevos de esta página -->
+  <link rel="stylesheet" href="estilos/general.css">
+  <link rel="stylesheet" href="estilos/toLEccion.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+  <!-- KaTeX: renderiza notación matemática (sintaxis tipo LaTeX) directamente en el navegador -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+    integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+    integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- ───────── SIDEBAR (idéntico al de lecciones.html para mantener navegación consistente) ───────── -->
+  <nav class="sidebar" id="sidebar">
+    <a class="sb-logo" href="index.html">
+      <div class="sb-logo-icon"><i class="ti ti-math-function"></i></div>
+      <span class="sb-logo-text">LoopMath</span>
+    </a>
+    <a class="sb-item" data-page="index.html" href="index.html">
+      <i class="ti ti-home"></i><span class="sb-item-label">Inicio</span>
+    </a>
+    <a class="sb-item active" data-page="lecciones.html" href="lecciones.html">
+      <i class="ti ti-book"></i><span class="sb-item-label">Lecciones</span>
+    </a>
+    <a class="sb-item" data-page="practica.html" href="practica.html">
+      <i class="ti ti-pencil"></i><span class="sb-item-label">Práctica</span>
+    </a>
+    <a class="sb-item" data-page="clasificacion.html" href="clasificacion.html">
+      <i class="ti ti-trophy"></i><span class="sb-item-label">Clasificación</span>
+    </a>
+    <div class="sb-divider"></div>
+    <a class="sb-item" data-page="registro.html" href="registro.html">
+      <i class="ti ti-notebook"></i><span class="sb-item-label">Registro</span>
+    </a>
+    <a class="sb-item" data-page="ajustes.html" href="ajustes.html">
+      <i class="ti ti-settings"></i><span class="sb-item-label">Ajustes</span>
+    </a>
+    <button class="sb-toggle" id="sb-toggle" aria-label="Expandir o colapsar menú">
+      <i class="ti ti-chevrons-right"></i>
+      <span class="sb-toggle-label">Colapsar</span>
+    </button>
+  </nav>
+
+  <div class="page-main">
+    <header class="topbar">
+      <div>
+        <div class="topbar-title">Teoría de Derivadas</div>
+        <div class="topbar-sub">Toda la materia, organizada por unidad y lección</div>
+      </div>
+    </header>
+
+    <div class="content content--ancho">
+
+      <a class="volver-link" href="lecciones.html">
+        <i class="ti ti-arrow-left"></i> Volver al índice de lecciones
+      </a>
+
+      <!-- ════════════════════════════════════════════════════════════
+           UNIDAD 1 · FUNDAMENTOS
+           Solo concepto e intuición, sin reglas de cálculo todavía.
+           Las 3 lecciones quedan como placeholders: aquí escribes tú la teoría.
+           ════════════════════════════════════════════════════════════ -->
+      <div class="unit-divider">
+        <span class="unit-divider-badge g">Unidad 1</span>
+        <span class="unit-divider-title">Fundamentos</span>
+      </div>
+
+      <details class="lesson-detail" id="leccion-1">
+        <summary>
+          <span class="ld-num">1</span>
+          <span class="ld-title">¿Qué es una derivada?</span>
+          <i class="ti ti-chevron-down chevron-icon"></i>
+        </summary>
+        <div class="lesson-body">
+
+          <h4 class="seccion-titulo">Concepto e intuición</h4>
+          <!-- ESCRIBE AQUÍ: explicación intuitiva de razón de cambio instantánea -->
+          <div class="bloque-pendiente">
+            Escribe aquí la explicación intuitiva: ¿qué significa "razón de cambio instantánea"?
+            Puedes apoyarte en un ejemplo cotidiano (velocidad, crecimiento, etc.).
+          </div>
+
+          <h4 class="seccion-titulo">Definición formal</h4>
+          <!-- ESCRIBE AQUÍ: definición por el límite -->
+          <div class="bloque-pendiente">
+            Escribe aquí la definición formal por límite: $$f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}$$
+            (puedes dejar la fórmula y solo redactar la explicación alrededor de ella).
+          </div>
+
+          <h4 class="seccion-titulo">Nota / dato curioso</h4>
+          <div class="bloque-pendiente">
+            Espacio opcional para una nota histórica, una analogía o una aclaración adicional.
+          </div>
+
+        </div>
+      </details>
+
+      <details class="lesson-detail" id="leccion-2">
+        <summary>
+          <span class="ld-num">2</span>
+          <span class="ld-title">Interpretación geométrica</span>
+          <i class="ti ti-chevron-down chevron-icon"></i>
+        </summary>
+        <div class="lesson-body">
+
+          <h4 class="seccion-titulo">Concepto e intuición</h4>
+          <div class="bloque-pendiente">
+            Escribe aquí cómo la derivada representa la pendiente de la recta tangente en un punto.
+          </div>
+
+          <h4 class="seccion-titulo">Relación con la gráfica</h4>
+          <div class="bloque-pendiente">
+            Espacio para explicar la diferencia entre recta secante y recta tangente
+            (más adelante podemos agregar aquí una gráfica interactiva con la API de Desmos).
+          </div>
+
+          <h4 class="seccion-titulo">Nota / dato curioso</h4>
+          <div class="bloque-pendiente">
+            Espacio opcional para una nota adicional.
+          </div>
+
+        </div>
+      </details>
+
+      <details class="lesson-detail" id="leccion-3">
+        <summary>
+          <span class="ld-num">3</span>
+          <span class="ld-title">Notación e historia</span>
+          <i class="ti ti-chevron-down chevron-icon"></i>
+        </summary>
+        <div class="lesson-body">
+
+          <h4 class="seccion-titulo">Concepto e intuición</h4>
+          <div class="bloque-pendiente">
+            Escribe aquí la comparación entre las notaciones de Newton y Leibniz:
+            $f'(x)$ vs. $\dfrac{dy}{dx}$ — qué significa cada una y cuándo se usa una u otra.
+          </div>
+
+          <h4 class="seccion-titulo">Contexto histórico</h4>
+          <div class="bloque-pendiente">
+            Espacio para una breve reseña histórica sobre el desarrollo del cálculo diferencial.
+          </div>
+
+        </div>
+      </details>
+
+
+      <!-- ════════════════════════════════════════════════════════════
+           UNIDAD 2 · PRIMERAS REGLAS
+           Solo la primera lección (Derivada de una constante) tiene
+           contenido de ejemplo. El resto queda vacío con la misma plantilla.
+           ════════════════════════════════════════════════════════════ -->
+      <div class="unit-divider">
+        <span class="unit-divider-badge b">Unidad 2</span>
+        <span class="unit-divider-title">Primeras reglas</span>
+      </div>
+
+      <!-- LECCIÓN CON CONTENIDO DE EJEMPLO (plantilla completa) -->
+      <details class="lesson-detail" id="leccion-4" open>
+        <summary>
+          <span class="ld-num">4</span>
+          <span class="ld-title">Derivada de una constante</span>
+          <i class="ti ti-chevron-down chevron-icon"></i>
+        </summary>
+        <div class="lesson-body">
+
+          <h4 class="seccion-titulo">Concepto e intuición</h4>
+          <p class="teoria-texto">
+            La derivada mide qué tan rápido cambia una función. Una constante, por definición,
+            nunca cambia: su gráfica es una recta horizontal con pendiente cero.
+            Por eso, sin importar qué número sea, su derivada siempre es <strong>0</strong>.
+          </p>
+
+          <h4 class="seccion-titulo">Fórmula</h4>
+          <div class="formula-destacada">
+            $$\frac{d}{dx}[c] = 0$$
+          </div>
+
+          <h4 class="seccion-titulo">Ejemplo resuelto</h4>
+          <div class="pizarra">
+            <div class="pizarra-paso">
+              <span class="paso-num">1</span>
+              <div class="paso-contenido">
+                <div class="paso-texto">Identificamos la función</div>
+                <div class="paso-expr">$f(x) = 7$</div>
+              </div>
+            </div>
+            <div class="pizarra-paso">
+              <span class="paso-num">2</span>
+              <div class="paso-contenido">
+                <div class="paso-texto">Aplicamos la regla: una constante no depende de $x$, así que su pendiente es
+                  cero</div>
+                <div class="paso-expr">$f'(x) = 0$</div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="seccion-titulo">Errores comunes</h4>
+          <div class="errores-comunes">
+            <ul>
+              <li>Confundir "la derivada vale 0" con "la función vale 0" (son cosas distintas: $f(x)=7$, no $f(x)=0$).
+              </li>
+              <li>Intentar "hacer algo" con el número 7 (multiplicarlo, bajarlo como exponente, etc.). No hay operación:
+                simplemente es 0.</li>
+            </ul>
+          </div>
+
+        </div>
+      </details>
+
+      <!-- LECCIÓN VACÍA: misma plantilla, sin contenido -->
+      <details class="lesson-detail" id="leccion-5">
+        <summary>
+          <span class="ld-num">5</span>
+          <span class="ld-title">Regla de potencias</span>
+          <i class="ti ti-chevron-down chevron-icon"></i>
+        </summary>
+        <div class="lesson-body">
+          <h4 class="seccion-titulo">Concepto e intuición</h4>
+          <div class="bloque-pendiente">Pendiente de redactar.</div>
+          <h4 class="seccion-titulo">Fórmula</h4>
+          <div class="bloque-pendiente">Pendiente: $$\frac{d}{dx}[x^n] = n \cdot x^{n-1}$$</div>
+          <h4 class="seccion-titulo">Ejemplo resuelto</h4>
+          <div class="bloque-pendiente">Pendiente de agregar la pizarra de pasos.</div>
+          <h4 class="seccion-titulo">Errores comunes</h4>
+          <div class="bloque-pendiente">Pendiente de redactar.</div>
+        </div>
+      </details>
+
+      <!-- LECCIÓN VACÍA: misma plantilla, sin contenido -->
+      <details class="lesson-detail" id="leccion-6">
+        <summary>
+          <span class="ld-num">6</span>
+          <span class="ld-title">Regla de suma y resta</span>
+          <i class="ti ti-chevron-down chevron-icon"></i>
+        </summary>
+        <div class="lesson-body">
+          <h4 class="seccion-titulo">Concepto e intuición</h4>
+          <div class="bloque-pendiente">Pendiente de redactar.</div>
+          <h4 class="seccion-titulo">Fórmula</h4>
+          <div class="bloque-pendiente">Pendiente: $$[f(x) \pm g(x)]' = f'(x) \pm g'(x)$$</div>
+          <h4 class="seccion-titulo">Ejemplo resuelto</h4>
+          <div class="bloque-pendiente">Pendiente de agregar la pizarra de pasos.</div>
+          <h4 class="seccion-titulo">Errores comunes</h4>
+          <div class="bloque-pendiente">Pendiente de redactar.</div>
+        </div>
+      </details>
+
+
+      <!-- ════════════════════════════════════════════════════════════
+           UNIDAD 3 · REGLAS DE DERIVACIÓN
+           Solo la primera lección (Regla del producto) tiene contenido.
+           ════════════════════════════════════════════════════════════ -->
+      <div class="unit-divider">
+        <span class="unit-divider-badge o">Unidad 3</span>
+        <span class="unit-divider-title">Reglas de derivación</span>
+      </div>
+
+      <!-- LECCIÓN CON CONTENIDO DE EJEMPLO (plantilla completa) -->
+      <details class="lesson-detail" id="leccion-7">
+        <summary>
+          <span class="ld-num">7</span>
+          <span class="ld-title">Regla del producto</span>
+          <i class="ti ti-chevron-down chevron-icon"></i>
+        </summary>
+        <div class="lesson-body">
+
+          <h4 class="seccion-titulo">Concepto e intuición</h4>
+          <p class="teoria-texto">
+            Cuando una función es el producto de otras dos, <strong>no</strong> se puede derivar
+            cada parte por separado y multiplicar los resultados. Hay que "repartir" la derivada
+            entre ambos factores siguiendo una fórmula específica.
+          </p>
+
+          <h4 class="seccion-titulo">Fórmula</h4>
+          <div class="formula-destacada">
+            $$(u \cdot v)' = u'v + uv'$$
+          </div>
+
+          <h4 class="seccion-titulo">Ejemplo resuelto</h4>
+          <div class="pizarra">
+            <div class="pizarra-paso">
+              <span class="paso-num">1</span>
+              <div class="paso-contenido">
+                <div class="paso-texto">Identificamos la función y separamos $u$ y $v$</div>
+                <div class="paso-expr">$f(x) = x^2(3x-1) \;\Rightarrow\; u=x^2,\; v=3x-1$</div>
+              </div>
+            </div>
+            <div class="pizarra-paso">
+              <span class="paso-num">2</span>
+              <div class="paso-contenido">
+                <div class="paso-texto">Derivamos cada factor por separado</div>
+                <div class="paso-expr">$u' = 2x \qquad v' = 3$</div>
+              </div>
+            </div>
+            <div class="pizarra-paso">
+              <span class="paso-num">3</span>
+              <div class="paso-contenido">
+                <div class="paso-texto">Sustituimos en la fórmula $u'v + uv'$</div>
+                <div class="paso-expr">$f'(x) = 2x(3x-1) + x^2(3)$</div>
+              </div>
+            </div>
+            <div class="pizarra-paso">
+              <span class="paso-num">4</span>
+              <div class="paso-contenido">
+                <div class="paso-texto">Distribuimos y simplificamos, sumando términos semejantes</div>
+                <div class="paso-expr">$f'(x) = 6x^2 - 2x + 3x^2 = 9x^2 - 2x$</div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="seccion-titulo">Errores comunes</h4>
+          <div class="errores-comunes">
+            <ul>
+              <li>Confundirla con la regla del cociente (restar en vez de sumar, o dividir entre $v^2$ sin que haya
+                división).</li>
+              <li>Derivar solo uno de los dos factores y dejar el otro sin derivar.</li>
+              <li>Olvidar simplificar al final, dejando términos semejantes sin combinar.</li>
+            </ul>
+          </div>
+
+        </div>
+      </details>
+
+      <!-- LECCIÓN VACÍA: misma plantilla, sin contenido -->
+      <details class="lesson-detail" id="leccion-8">
+        <summary>
+          <span class="ld-num">8</span>
+          <span class="ld-title">Regla del cociente</span>
+          <i class="ti ti-chevron-down chevron-icon"></i>
+        </summary>
+        <div class="lesson-body">
+          <h4 class="seccion-titulo">Concepto e intuición</h4>
+          <div class="bloque-pendiente">Pendiente de redactar.</div>
+          <h4 class="seccion-titulo">Fórmula</h4>
+          <div class="bloque-pendiente">Pendiente: $$\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$$</div>
+          <h4 class="seccion-titulo">Ejemplo resuelto</h4>
+          <div class="bloque-pendiente">Pendiente de agregar la pizarra de pasos.</div>
+          <h4 class="seccion-titulo">Errores comunes</h4>
+          <div class="bloque-pendiente">Pendiente de redactar (cuidado especial con el signo negativo del numerador).
+          </div>
+        </div>
+      </details>
+
+      <!-- LECCIÓN VACÍA: misma plantilla, sin contenido -->
+      <details class="lesson-detail" id="leccion-9">
+        <summary>
+          <span class="ld-num">9</span>
+          <span class="ld-title">Regla de la cadena</span>
+          <i class="ti ti-chevron-down chevron-icon"></i>
+        </summary>
+        <div class="lesson-body">
+          <h4 class="seccion-titulo">Concepto e intuición</h4>
+          <div class="bloque-pendiente">Pendiente de redactar.</div>
+          <h4 class="seccion-titulo">Fórmula</h4>
+          <div class="bloque-pendiente">Pendiente: $$\frac{d}{dx}\big[f(g(x))\big] = f'(g(x)) \cdot g'(x)$$</div>
+          <h4 class="seccion-titulo">Ejemplo resuelto</h4>
+          <div class="bloque-pendiente">Pendiente de agregar la pizarra de pasos.</div>
+          <h4 class="seccion-titulo">Errores comunes</h4>
+          <div class="bloque-pendiente">Pendiente de redactar.</div>
+        </div>
+      </details>
+
+
+      <!-- ════════════════════════════════════════════════════════════
+           UNIDAD 4 · DERIVADAS AVANZADAS
+           Solo la primera lección (Derivadas trigonométricas) tiene contenido.
+           ════════════════════════════════════════════════════════════ -->
+      <div class="unit-divider">
+        <span class="unit-divider-badge p">Unidad 4</span>
+        <span class="unit-divider-title">Derivadas avanzadas</span>
+      </div>
+
+      <!-- LECCIÓN CON CONTENIDO DE EJEMPLO (plantilla completa) -->
+      <details class="lesson-detail" id="leccion-10">
+        <summary>
+          <span class="ld-num">10</span>
+          <span class="ld-title">Derivadas trigonométricas</span>
+          <i class="ti ti-chevron-down chevron-icon"></i>
+        </summary>
+        <div class="lesson-body">
+
+          <h4 class="seccion-titulo">Concepto e intuición</h4>
+          <p class="teoria-texto">
+            Las funciones trigonométricas tienen derivadas fijas que conviene memorizar.
+            Una vez memorizadas, se combinan con las reglas que ya conoces (suma, resta, producto, cadena).
+          </p>
+
+          <h4 class="seccion-titulo">Fórmulas</h4>
+          <div class="formula-destacada">
+            $$\frac{d}{dx}[\sin x] = \cos x \qquad\qquad \frac{d}{dx}[\cos x] = -\sin x$$
+          </div>
+
+          <h4 class="seccion-titulo">Ejemplo resuelto</h4>
+          <div class="pizarra">
+            <div class="pizarra-paso">
+              <span class="paso-num">1</span>
+              <div class="paso-contenido">
+                <div class="paso-texto">Identificamos la función (es una resta de dos términos, regla de suma/resta de
+                  la Unidad 2)</div>
+                <div class="paso-expr">$f(x) = 3\sin x - x^2$</div>
+              </div>
+            </div>
+            <div class="pizarra-paso">
+              <span class="paso-num">2</span>
+              <div class="paso-contenido">
+                <div class="paso-texto">Derivamos cada término por separado</div>
+                <div class="paso-expr">$\dfrac{d}{dx}[3\sin x] = 3\cos x \qquad \dfrac{d}{dx}[-x^2] = -2x$</div>
+              </div>
+            </div>
+            <div class="pizarra-paso">
+              <span class="paso-num">3</span>
+              <div class="paso-contenido">
+                <div class="paso-texto">Combinamos ambos resultados conservando los signos</div>
+                <div class="paso-expr">$f'(x) = 3\cos x - 2x$</div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="seccion-titulo">Errores comunes</h4>
+          <div class="errores-comunes">
+            <ul>
+              <li>Olvidar el signo negativo al derivar $\cos x$ (su derivada es $-\sin x$, no $\sin x$).</li>
+              <li>Olvidar el signo negativo que ya traía $-x^2$ al derivarlo (queda $-2x$, no $2x$).</li>
+              <li>Mezclar las fórmulas: confundir cuál función deriva en cuál (sin → cos, pero cos → -sin).</li>
+            </ul>
+          </div>
+
+        </div>
+      </details>
+
+      <!-- LECCIÓN VACÍA: misma plantilla, sin contenido -->
+      <details class="lesson-detail" id="leccion-11">
+        <summary>
+          <span class="ld-num">11</span>
+          <span class="ld-title">Derivadas exponenciales y logarítmicas</span>
+          <i class="ti ti-chevron-down chevron-icon"></i>
+        </summary>
+        <div class="lesson-body">
+          <h4 class="seccion-titulo">Concepto e intuición</h4>
+          <div class="bloque-pendiente">Pendiente de redactar.</div>
+          <h4 class="seccion-titulo">Fórmula</h4>
+          <div class="bloque-pendiente">Pendiente: $$\frac{d}{dx}[e^x] = e^x \qquad \frac{d}{dx}[\ln x] = \frac{1}{x}$$
+          </div>
+          <h4 class="seccion-titulo">Ejemplo resuelto</h4>
+          <div class="bloque-pendiente">Pendiente de agregar la pizarra de pasos.</div>
+          <h4 class="seccion-titulo">Errores comunes</h4>
+          <div class="bloque-pendiente">Pendiente de redactar.</div>
+        </div>
+      </details>
+
+      <!-- LECCIÓN VACÍA: misma plantilla, sin contenido -->
+      <details class="lesson-detail" id="leccion-12">
+        <summary>
+          <span class="ld-num">12</span>
+          <span class="ld-title">Derivación implícita</span>
+          <i class="ti ti-chevron-down chevron-icon"></i>
+        </summary>
+        <div class="lesson-body">
+          <h4 class="seccion-titulo">Concepto e intuición</h4>
+          <div class="bloque-pendiente">Pendiente de redactar.</div>
+          <h4 class="seccion-titulo">Fórmula</h4>
+          <div class="bloque-pendiente">Pendiente: $$\frac{d}{dx}[y^2] = 2y\frac{dy}{dx}$$</div>
+          <h4 class="seccion-titulo">Ejemplo resuelto</h4>
+          <div class="bloque-pendiente">Pendiente de agregar la pizarra de pasos.</div>
+          <h4 class="seccion-titulo">Errores comunes</h4>
+          <div class="bloque-pendiente">Pendiente de redactar.</div>
+        </div>
+      </details>
+
+      <!-- LECCIÓN VACÍA: misma plantilla, sin contenido -->
+      <details class="lesson-detail" id="leccion-13">
+        <summary>
+          <span class="ld-num">13</span>
+          <span class="ld-title">Derivación logarítmica</span>
+          <i class="ti ti-chevron-down chevron-icon"></i>
+        </summary>
+        <div class="lesson-body">
+          <h4 class="seccion-titulo">Concepto e intuición</h4>
+          <div class="bloque-pendiente">Pendiente de redactar.</div>
+          <h4 class="seccion-titulo">Fórmula</h4>
+          <div class="bloque-pendiente">Pendiente: $$\ln(y) \;\Rightarrow\; \frac{d}{dx}[\ln(y)] =
+            \frac{1}{y}\frac{dy}{dx}$$</div>
+          <h4 class="seccion-titulo">Ejemplo resuelto</h4>
+          <div class="bloque-pendiente">Pendiente de agregar la pizarra de pasos.</div>
+          <h4 class="seccion-titulo">Errores comunes</h4>
+          <div class="bloque-pendiente">Pendiente de redactar.</div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+  <!-- scrpts/sidebar.js: colapsar/expandir menú lateral -->
+  <script src="scrpts/sidebar.js"></script>
+  <!-- scrpts/toLEccionjs.js: desplazamiento suave + apertura automática del <details> al entrar por ancla (#leccion-N) -->
+  <script src="scrpts/toLEccionjs.js"></script>
+
+</body>
+
+</html>
