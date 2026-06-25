@@ -2,4 +2,5 @@
 # APPCALCULO
 
 APRENDE A DERIVAR
-Loopmath; Elaborado por
+Loopmath; Elaborado por Apusquisqui
+
